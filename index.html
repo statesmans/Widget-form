@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <section class="form">
+        <div class="container">
+            <div class="form__block">
+                <h1 class="form__title">Where does it come from?<br>
+                    Why do we use it?</h1>
+                <p class="form__subtitle">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <form class="form__input-block" action="POST">
+                    <div class="form__input-item">                    
+                        <input class="form__input form__date" type="text" id="datepicker" value="Depart date">
+                        <img src="calendar.svg" alt="">
+                    </div>
+                    <div class="form__input-item">   
+                        <input class="form__input form__date" type="text" id="datepicker" value="Return date">
+                        <img src="calendar.svg" alt="">
+                    </div>
+                    <input class="form__input form__submit" type="submit" value="search">
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
+    <script>
+    var picker = new Pikaday({
+        field: document.getElementById('datepicker'),
+        format: 'D - MM - YYYY',
+    });
+    </script>
+</body>
+</html>
