@@ -17,11 +17,11 @@
                 <p class="form__subtitle">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 <form class="form__input-block" action="POST">
                     <div class="form__input-item">                    
-                        <input class="form__input form__date" type="text" id="datepicker" value="Depart date">
+                        <input class="form__input form__date" type="text" id="datepicker-depart" value="Depart date">
                         <img src="calendar.svg" alt="">
                     </div>
                     <div class="form__input-item">   
-                        <input class="form__input form__date" type="text" id="datepicker" value="Return date">
+                        <input class="form__input form__date" type="text" id="datepicker-return" value="Return date">
                         <img src="calendar.svg" alt="">
                     </div>
                     <input class="form__input form__submit" type="submit" value="search">
@@ -33,8 +33,12 @@
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 
     <script>
-    var picker = new Pikaday({
-        field: document.getElementById('datepicker'),
+    var pickerDepart = new Pikaday({
+        field: document.getElementById('datepicker-depart'),
+        format: 'D - MM - YYYY',
+    });
+    var pickerReturn = new Pikaday({
+        field: document.getElementById('datepicker-return'),
         format: 'D - MM - YYYY',
     });
     </script>
